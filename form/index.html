@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORM</title>
+    <link rel="stylesheet" href="./form.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Заполните поля</h1>
+      <p>ну пожалуйста</p>
+    </header>
+    <form action="#" method="post">
+      <fieldset class="form__section form__section--main">
+        <legend class="form__legend">
+          <h2>Основное</h2>
+        </legend>
+        <label class="form__label" for="name">Имя</label>
+        <input
+          class="form__input"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="по паспорту"
+          required
+        />
+
+        <label class="form__label" for="color">Цвет вашего настроения</label>
+        <input
+          class="form__input"
+          type="color"
+          id="color"
+          name="color"
+          value="#0000ff"
+        />
+      </fieldset>
+
+      <fieldset class="form__section form__section--additional">
+        <legend class="form__legend">
+          <h2>Дополнительное</h2>
+        </legend>
+        <label class="form__label" for="comment">Комментарий</label>
+        <textarea
+          class="form__textarea"
+          id="comment"
+          name="comment"
+          rows="4"
+          cols="50"
+          placeholder="Напишите хоть что-нибудь.&#10;Если хотите, конечно."
+        >
+        </textarea>
+      </fieldset>
+
+      <fieldset class="form__section form__section--additional">
+        <input type="radio" id="just-radio" name="agree" value="yes" />
+        <label for="just-radio">Ну а тут просто полежит радиобатон</label>
+
+        <input type="checkbox" id="agree" name="agree" value="yes" checked />
+        <label for="agree">
+          Соглашусь на всё, что бы вы ни придумали и осознаю, что это может
+          означать <a href="#">что угодно</a>
+        </label>
+
+        <button type="submit" value="Отправить все мои данные" />
+      </fieldset>
+    </form>
+  </body>
+</html>
