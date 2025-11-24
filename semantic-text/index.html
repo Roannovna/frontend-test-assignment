@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Я ♥ семантику</title>
     <style>
       body {
@@ -15,6 +15,11 @@
       a {
         color: #ff7de1;
         text-decoration: dotted underline;
+      }
+      a:focus-visible,
+      summary:focus-visible {
+        outline: 3px solid #6a4672;
+        outline-offset: 2px;
       }
       code {
         background: #e1d6ff;
@@ -96,13 +101,21 @@
       <hr />
     </header>
 
-    <nav>
+    <nav aria-label="Навигация по разделам статьи">
       <h2>Пример навигации</h2>
       <ul>
-        <li><a href="#section1">Смысловые блоки</a></li>
-        <li><a href="#section2">Изображения</a></li>
-        <li><a href="#section3">Цитаты и код</a></li>
-        <li><a href="#section4">Таблица тегов</a></li>
+        <li>
+          <a href="#section1">Смысловые блоки</a>
+        </li>
+        <li>
+          <a href="#section2">Изображения</a>
+        </li>
+        <li>
+          <a href="#section3">Цитаты и код</a>
+        </li>
+        <li>
+          <a href="#section4">Таблица тегов</a>
+        </li>
       </ul>
     </nav>
 
@@ -129,12 +142,12 @@
             Списки — упорядоченные <code>&lt;ol&gt;</code> и неупорядоченные
             <code>&lt;ul&gt;</code>
           </li>
-          <li>Ссылки <a href="#">для переходов</a></li>
+          <li>Ссылки для <a href="#">переходов</a></li>
         </ul>
 
         <h3>Пример интерактивного блока</h3>
-        <details>
-          <summary>Подробнее о семантике</summary>
+        <details aria-label="Интерактивный блок">
+          <summary aria-label="Развернуть">Подробнее о семантике</summary>
           <p>
             Тег <code>&lt;details&gt;</code> позволяет скрывать и показывать
             содержимое по клику, что удобно для FAQ или дополнительных
@@ -148,9 +161,12 @@
         <figure>
           <img
             src="https://s.iimg.su/s/24/gxo5TDrxFamMHe5op7DMg2K0VEYfmeI0VGZLKr7n.jpg"
-            alt="Девушка программист работает за ноутбуком"
+            alt=""
+            aria-describedby="fig1"
           />
-          <figcaption>Девушка программист работает за ноутбуком</figcaption>
+          <figcaption id="fig1">
+            Девушка программист работает за ноутбуком
+          </figcaption>
         </figure>
         <p>
           Картинки — это не только украшение, но и часть контента. Поэтому важно
@@ -167,73 +183,77 @@
       </section>
       <section id="section3">
         <h2>Цитаты и примеры кода</h2>
-        <q>Хорошая разметка — это когда всё на своём месте</q>
-        <p>в</p>
-        <pre>&lt;pre&gt;</pre>
-        для сохранения форматирования: в <code>&lt;pre&gt;</code> для сохранения
-        форматирования:
+        <q> Хорошая разметка — это когда всё на своём месте </q>
+        <p>Пример предформатированного блока кода:</p>
         <pre>
-  function hello() {
-    console.log("Привет, семантика!");
-  }
+<code>function hello() {
+  console.log("Привет, семантика!");
+}</code>
         </pre>
       </section>
 
       <section id="section4">
         <h2>Несколько распространённых семантических тегов</h2>
         <table>
-          <tr>
-            <th>Тег</th>
-            <th>Для чего используется</th>
-          </tr>
-          <tr>
-            <td><code>&lt;header&gt;</code></td>
-            <td>Вступительная часть страницы или раздела</td>
-          </tr>
-          <tr>
-            <td><code>&lt;main&gt;</code></td>
-            <td>Основной контент</td>
-          </tr>
-          <tr>
-            <td><code>&lt;footer&gt;</code></td>
-            <td>Завершающий блок</td>
-          </tr>
-          <tr>
-            <td><code>&lt;nav&gt;</code></td>
-            <td>Навигационная панель</td>
-          </tr>
-          <tr>
-            <td><code>&lt;section&gt;</code></td>
-            <td>Отдельная тема внутри документа</td>
-          </tr>
-          <tr>
-            <td><code>&lt;article&gt;</code></td>
-            <td>Самодостаточный фрагмент контента</td>
-          </tr>
-          <tr>
-            <td><code>&lt;aside&gt;</code></td>
-            <td>Боковая панель с дополнительной информацией</td>
-          </tr>
-          <tr>
-            <td><code>&lt;details&gt;</code></td>
-            <td>Скрываемый блок информации</td>
-          </tr>
-          <tr>
-            <td><code>&lt;summary&gt;</code></td>
-            <td>Заголовок для <code>&lt;details&gt;</code></td>
-          </tr>
-          <tr>
-            <td><code>&lt;mark&gt;</code></td>
-            <td>Выделение важного текста</td>
-          </tr>
-          <tr>
-            <td><code>&lt;code&gt;</code></td>
-            <td>Выделение кода</td>
-          </tr>
-          <tr>
-            <td><code>&lt;pre&gt;</code></td>
-            <td>Предформатированный текст</td>
-          </tr>
+          <caption>
+            Семантические теги и их назначение
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Тег</th>
+              <th scope="col">Для чего используется</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&lt;header&gt;</code></td>
+              <td>Вступительная часть страницы или раздела</td>
+            </tr>
+            <tr>
+              <td><code>&lt;main&gt;</code></td>
+              <td>Основной контент</td>
+            </tr>
+            <tr>
+              <td><code>&lt;footer&gt;</code></td>
+              <td>Завершающий блок</td>
+            </tr>
+            <tr>
+              <td><code>&lt;nav&gt;</code></td>
+              <td>Навигационная панель</td>
+            </tr>
+            <tr>
+              <td><code>&lt;section&gt;</code></td>
+              <td>Отдельная тема внутри документа</td>
+            </tr>
+            <tr>
+              <td><code>&lt;article&gt;</code></td>
+              <td>Самодостаточный фрагмент контента</td>
+            </tr>
+            <tr>
+              <td><code>&lt;aside&gt;</code></td>
+              <td>Боковая панель с дополнительной информацией</td>
+            </tr>
+            <tr>
+              <td><code>&lt;details&gt;</code></td>
+              <td>Скрываемый блок информации</td>
+            </tr>
+            <tr>
+              <td><code>&lt;summary&gt;</code></td>
+              <td>Заголовок для <code>&lt;details&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>&lt;mark&gt;</code></td>
+              <td>Выделение важного текста</td>
+            </tr>
+            <tr>
+              <td><code>&lt;code&gt;</code></td>
+              <td>Выделение кода</td>
+            </tr>
+            <tr>
+              <td><code>&lt;pre&gt;</code></td>
+              <td>Предформатированный текст</td>
+            </tr>
+          </tbody>
         </table>
       </section>
       <section id="section5">
