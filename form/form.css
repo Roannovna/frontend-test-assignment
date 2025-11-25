@@ -1,0 +1,153 @@
+:root {
+  --text-color: #333333;
+  --accent-color: #FFF8C8;
+  --btn-bg-color-1: #886FEB;
+  --btn-bg-color-2: #5740D7;
+  --body-bg-color: #DDDCE3;
+  --form-bg-color: #FFFFFF;
+  --form-border-color: #D0D0D0;
+  --width-form: 650px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.visually-hidden { display: none; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 375px;
+  width: 100dvw;
+  height: 100dvh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--body-bg-color);
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--width-form);
+  margin-bottom: 20px;
+}
+
+.form-header__title {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.form-header__subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-color);}
+
+.form {
+  width: var(--width-form);
+  background-color: var(--form-bg-color);
+  border: 1px solid #D0D0D0;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.15), 0 10px 16px -10px rgba(0,0,0,0.35);
+}
+
+.form__section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 15px;
+  width: 100%;
+  padding: 20px 140px 20px 30px;
+  border: none;
+}
+
+.form__section--additional {
+  background-color: var(--accent-color);
+  box-shadow: 0 7px 7px -7px rgba(0, 0, 0, 0.25);
+}
+
+.form__section-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.form__label {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--text-color);
+}
+
+.form__label--name,
+.form__label--color,
+.form__label--textarea {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-top: 6.5px;
+  grid-column: 1 / span 1;
+}
+
+.form__section-title,
+.form__input,
+.form__input--color,
+.form__textarea,
+.form__section--submit * {
+  grid-column: 2 / span 1;
+}
+
+.form__input,
+.form__textarea {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.form__input--color {
+  padding: 2px;
+  border: none;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.form__controls {
+  display: grid;
+  grid-template-columns: 20px auto;
+  grid-auto-rows: max-content;
+  gap: 16px 8px;
+}
+
+.form__controls input {
+  grid-column: 1 / span 1;
+}
+
+.form__controls label {
+  grid-column: 2 / span 1;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--accent-color);
+  cursor: pointer;
+}
+
+.form__button--submit {
+  display: block;
+  width: max-content;
+  margin: 10px 0;
+  padding: 12px 24px;
+  background: linear-gradient(var(--btn-bg-color-1), var(--btn-bg-color-2));
+  color: var(--form-bg-color);
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 7px 5px -5px rgba(0, 0, 0, 0.50);  
+  cursor: pointer;
+}

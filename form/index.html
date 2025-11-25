@@ -7,16 +7,15 @@
     <link rel="stylesheet" href="./form.css" />
   </head>
   <body>
-    <header>
-      <h1>Заполните поля</h1>
-      <p>ну пожалуйста</p>
+    <header class="form-header">
+      <h1 class="form-header__title">Заполните поля</h1>
+      <p class="form-header__subtitle">ну пожалуйста</p>
     </header>
-    <form action="#" method="post">
+    <form class="form" action="#" method="post">
       <fieldset class="form__section form__section--main">
-        <legend class="form__legend">
-          <h2>Основное</h2>
-        </legend>
-        <label class="form__label" for="name">Имя</label>
+        <legend class="form__legend visually-hidden">Основное</legend>
+        <h2 class="form__section-title">Основное</h2>
+        <label class="form__label form__label--name" for="name">Имя</label>
         <input
           class="form__input"
           type="text"
@@ -26,9 +25,11 @@
           required
         />
 
-        <label class="form__label" for="color">Цвет вашего настроения</label>
+        <label class="form__label form__label--color" for="color"
+          >Цвет вашего настроения</label
+        >
         <input
-          class="form__input"
+          class="form__input--color"
           type="color"
           id="color"
           name="color"
@@ -37,10 +38,11 @@
       </fieldset>
 
       <fieldset class="form__section form__section--additional">
-        <legend class="form__legend">
-          <h2>Дополнительное</h2>
-        </legend>
-        <label class="form__label" for="comment">Комментарий</label>
+        <legend class="form__legend visually-hidden">Дополнительное</legend>
+        <h2 class="form__section-title">Дополнительное</h2>
+        <label class="form__label form__label--textarea" for="comment"
+          >Комментарий</label
+        >
         <textarea
           class="form__textarea"
           id="comment"
@@ -48,21 +50,33 @@
           rows="4"
           cols="50"
           placeholder="Напишите хоть что-нибудь.&#10;Если хотите, конечно."
-        >
-        </textarea>
+        ></textarea>
       </fieldset>
 
-      <fieldset class="form__section form__section--additional">
-        <input type="radio" id="just-radio" name="agree" value="yes" />
-        <label for="just-radio">Ну а тут просто полежит радиобатон</label>
+      <fieldset class="form__section form__section--submit">
+        <div class="form__controls">
+          <input type="radio" id="just-radio" name="agree" value="yes" />
+          <label class="form__label form__label--radio" for="just-radio"
+            >Ну а тут просто полежит радиобатон</label
+          >
 
-        <input type="checkbox" id="agree" name="agree" value="yes" checked />
-        <label for="agree">
-          Соглашусь на всё, что бы вы ни придумали и осознаю, что это может
-          означать <a href="#">что угодно</a>
-        </label>
+          <input
+            type="checkbox"
+            id="agree"
+            name="agree"
+            value="yes"
+            checked
+            required
+          />
+          <label class="form__label form__label--checkbox" for="agree">
+            Соглашусь на всё, что бы вы ни придумали и осознаю, что это может
+            означать <a href="#">что угодно</a>
+          </label>
+        </div>
 
-        <button type="submit" value="Отправить все мои данные" />
+        <button class="form__button--submit" type="submit" value="Отправить">
+          Отправить все мои данные
+        </button>
       </fieldset>
     </form>
   </body>
