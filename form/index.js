@@ -6,16 +6,16 @@ const nameError = document.getElementById("name-error");
 const checkboxError = document.getElementById("checkbox-error");
 const emptyError = document.getElementById("empty-error");
 
-function validateName() {
+function validateName(showMessage = true) {
   const value = (nameInput?.value || "").trim();
   const min = parseInt(nameInput?.getAttribute("minlength") || "0", 10);
   const pattern = nameInput?.getAttribute("pattern") || "";
   if (!value) {
-    nameError.textContent = "Введите имя";
+    if (showMessage) nameError.textContent = "Введите имя";
     return false;
   }
   if (min && value.length < min) {
-    nameError.textContent = `Минимум ${min} символа`;
+    if (showMessage) nameError.textContent = `Минимум ${min} символа`;
     return false;
   }
   if (pattern) {
@@ -27,36 +27,36 @@ function validateName() {
     }
     if (re && !re.test(value)) {
       const msg = nameInput?.dataset?.errorMessage || "Недопустимые символы";
-      nameError.textContent = msg;
+      if (showMessage) nameError.textContent = msg;
       return false;
     }
   }
-  nameError.textContent = "";
+  if (showMessage) nameError.textContent = "";
   return true;
 }
 
-function validateCheckbox() {
+function validateCheckbox(showMessage = true) {
   if (!checkbox?.checked) {
-    checkboxError.textContent = "Нужно согласие";
+    if (showMessage) checkboxError.textContent = "Нужно согласие";
     return false;
   }
-  checkboxError.textContent = "";
+  if (showMessage) checkboxError.textContent = "";
   return true;
 }
 
 function updateSubmitState() {
-  const ok = validateName() && validateCheckbox();
+  const ok = validateName(false) && validateCheckbox(false);
   submitButton.disabled = !ok;
   emptyError.textContent = "";
 }
 
 nameInput?.addEventListener("input", () => {
-  validateName();
+  validateName(true);
   updateSubmitState();
 });
 
 checkbox?.addEventListener("change", () => {
-  validateCheckbox();
+  validateCheckbox(true);
   updateSubmitState();
 });
 
