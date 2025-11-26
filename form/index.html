@@ -15,15 +15,26 @@
       <fieldset class="form__section form__section--main">
         <legend class="form__legend visually-hidden">Основное</legend>
         <h2 class="form__section-title">Основное</h2>
-        <label class="form__label form__label--name" for="name">Имя</label>
+        <label class="form__label form__label--name" for="input__name"
+          >Имя</label
+        >
         <input
-          class="form__input"
           type="text"
-          id="name"
-          name="name"
+          id="input__name"
+          class="form__input"
           placeholder="по паспорту"
+          pattern="^[a-zA-Zа-яА-ЯЁё \-]+$"
+          data-error-message="Разрешены символы латиницы, кириллицы, знаки дефиса и пробелы."
+          minlength="2"
+          aria-describedby="name-error"
           required
         />
+        <span
+          class="form__error input__name-error"
+          id="name-error"
+          aria-live="polite"
+        >
+        </span>
 
         <label class="form__label form__label--color" for="color"
           >Цвет вашего настроения</label
@@ -31,8 +42,7 @@
         <input
           class="form__input--color"
           type="color"
-          id="color"
-          name="color"
+          id="input__color"
           value="#0000ff"
         />
       </fieldset>
@@ -44,9 +54,8 @@
           >Комментарий</label
         >
         <textarea
+          id="input__comment"
           class="form__textarea"
-          id="comment"
-          name="comment"
           rows="4"
           cols="50"
           placeholder="Напишите хоть что-нибудь.&#10;Если хотите, конечно."
@@ -55,29 +64,46 @@
 
       <fieldset class="form__section form__section--submit">
         <div class="form__controls">
-          <input type="radio" id="just-radio" name="agree" value="yes" />
-          <label class="form__label form__label--radio" for="just-radio"
+          <input type="radio" id="input__radio" class="form__input-radio" />
+          <label class="form__label form__label--radio" for="input__radio"
             >Ну а тут просто полежит радиобатон</label
           >
 
           <input
             type="checkbox"
-            id="agree"
-            name="agree"
-            value="yes"
+            id="input__checkbox"
+            class="form__input-checkbox"
             checked
+            aria-describedby="checkbox-error"
             required
           />
-          <label class="form__label form__label--checkbox" for="agree">
+          <label
+            class="form__label form__label--checkbox"
+            for="input__checkbox"
+          >
             Соглашусь на всё, что бы вы ни придумали и осознаю, что это может
             означать <a href="#">что угодно</a>
           </label>
+          <span
+            class="form__error input__checkbox-error"
+            id="checkbox-error"
+            aria-live="polite"
+          >
+          </span>
         </div>
 
-        <button class="form__button--submit" type="submit" value="Отправить">
+        <button
+          class="form__button--submit"
+          type="submit"
+          value="Отправить"
+          aria-describedby="empty-error"
+        >
           Отправить все мои данные
         </button>
+        <span class="form__empty-error" id="empty-error" aria-live="assertive">
+        </span>
       </fieldset>
     </form>
   </body>
+  <script type="module" src="./index.js"></script>
 </html>
