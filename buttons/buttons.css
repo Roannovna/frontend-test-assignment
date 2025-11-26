@@ -21,16 +21,36 @@
   --btn-action-delete: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.707031 0.707092L9.70703 9.70709M9.70703 0.707092L0.707031 9.70709' stroke='%23111111' stroke-width='2'/%3e%3c/svg%3e ");
   --btn-action-print: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.5 10.5H3.5V7.5H12.5V10.5H13.5V8.5H15.5V5.5H12.5H3.5H2.5V7.5H0.5V10.5Z' fill='%23111111'/%3e%3cpath d='M12.5 3.5L9.5 0.5V3.5H12.5Z' fill='%23111111'/%3e%3cpath d='M3.5 5.5V0.5H9.5M3.5 5.5H12.5M3.5 5.5H2.5M3.5 10.5H0.5V7.5M3.5 10.5V13.5H12.5V10.5M3.5 10.5V7.5H12.5V10.5M12.5 10.5H13.5M12.5 5.5H15.5V8.5M12.5 5.5V3.5M12.5 3.5L9.5 0.5M12.5 3.5H9.5V0.5M0.5 7.5V5.5H2.5M0.5 7.5H2.5V5.5M13.5 10.5H15.5V8.5M13.5 10.5V8.5H15.5M5 9.5H11M5 11.5H11' stroke='%23111111'/%3e%3c/svg%3e ");
   --btn-action-download: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3 5.5L6 8.5L9 5.5H6.5H5.5H3Z' fill='%23111111'/%3e%3cpath d='M5.5 5.5H3L6 8.5L9 5.5H6.5M5.5 5.5V0.5H6.5V5.5M5.5 5.5H6.5M0.5 9.5V11.5H11.5V9.5H0.5Z' stroke='%23111111'/%3e%3c/svg%3e ");
+
+  --btn-action-edit-active: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.24264 13.435H-5.1856e-06V9.19239L4.24264 13.435Z' fill='%234C4C4C'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.94974 12.7279L0.707102 8.48528L7.07106 2.12132L11.3137 6.36396L4.94974 12.7279ZM2.12132 8.48528L4.94974 11.3137L9.89949 6.36396L7.07106 3.53553L2.12132 8.48528Z' fill='%234C4C4C'/%3e%3cpath d='M12.0208 5.65685L7.77817 1.41421L9.19238 0L13.435 4.24264L12.0208 5.65685Z' fill='%234C4C4C'/%3e%3c/svg%3e ");
+  --btn-action-upload-active: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='13' viewBox='0 0 12 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3 3.70715L6 0.707153L9 3.70715H6.5H5.5H3Z' fill='%234C4C4C'/%3e%3cpath d='M5.5 3.70715H3L6 0.707153L9 3.70715H6.5M5.5 3.70715V8.70715H6.5V3.70715M5.5 3.70715H6.5M6 10.2072H0.5V12.2072H11.5V10.2072H6Z' stroke='%234C4C4C'/%3e%3c/svg%3e ");
+  --btn-action-delete-active: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.707031 0.707153L9.70703 9.70715M9.70703 0.707153L0.707031 9.70715' stroke='%234C4C4C' stroke-width='2'/%3e%3c/svg%3e ");
+  --btn-action-print-active: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.5 10.5H3.5V7.5H12.5V10.5H13.5V8.5H15.5V5.5H12.5H3.5H2.5V7.5H0.5V10.5Z' fill='%234C4C4C'/%3e%3cpath d='M12.5 3.5L9.5 0.5V3.5H12.5Z' fill='%234C4C4C'/%3e%3cpath d='M3.5 5.5V0.5H9.5M3.5 5.5H12.5M3.5 5.5H2.5M3.5 10.5H0.5V7.5M3.5 10.5V13.5H12.5V10.5M3.5 10.5V7.5H12.5V10.5M12.5 10.5H13.5M12.5 5.5H15.5V8.5M12.5 5.5V3.5M12.5 3.5L9.5 0.5M12.5 3.5H9.5V0.5M0.5 7.5V5.5H2.5M0.5 7.5H2.5V5.5M13.5 10.5H15.5V8.5M13.5 10.5V8.5H15.5M5 9.5H11M5 11.5H11' stroke='%234C4C4C'/%3e%3c/svg%3e ");
+  --btn-action-download-active: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3 5.5L6 8.5L9 5.5H6.5H5.5H3Z' fill='%234C4C4C'/%3e%3cpath d='M5.5 5.5H3L6 8.5L9 5.5H6.5M5.5 5.5V0.5H6.5V5.5M5.5 5.5H6.5M0.5 9.5V11.5H11.5V9.5H0.5Z' stroke='%234C4C4C'/%3e%3c/svg%3e ");
+
+  --btn-action-edit-disabled: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.24264 13.435H-5.1856e-06V9.19239L4.24264 13.435Z' fill='%23888888'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.94974 12.7279L0.707102 8.48528L7.07106 2.12132L11.3137 6.36396L4.94974 12.7279ZM2.12132 8.48528L4.94974 11.3137L9.89949 6.36396L7.07106 3.53553L2.12132 8.48528Z' fill='%23888888'/%3e%3cpath d='M12.0208 5.65685L7.77817 1.41421L9.19238 0L13.435 4.24264L12.0208 5.65685Z' fill='%23888888'/%3e%3c/svg%3e ");
+  --btn-action-upload-disabled: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='13' viewBox='0 0 12 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3 3.70715L6 0.707153L9 3.70715H6.5H5.5H3Z' fill='%23888888'/%3e%3cpath d='M5.5 3.70715H3L6 0.707153L9 3.70715H6.5M5.5 3.70715V8.70715H6.5V3.70715M5.5 3.70715H6.5M6 10.2072H0.5V12.2072H11.5V10.2072H6Z' stroke='%23888888'/%3e%3c/svg%3e ");
+  --btn-action-delete-disabled: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.707031 0.707153L9.70703 9.70715M9.70703 0.707153L0.707031 9.70715' stroke='%23888888' stroke-width='2'/%3e%3c/svg%3e ");
+  --btn-action-print-disabled: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.5 10.5H3.5V7.5H12.5V10.5H13.5V8.5H15.5V5.5H12.5H3.5H2.5V7.5H0.5V10.5Z' fill='%23888888'/%3e%3cpath d='M12.5 3.5L9.5 0.5V3.5H12.5Z' fill='%23888888'/%3e%3cpath d='M3.5 5.5V0.5H9.5M3.5 5.5H12.5M3.5 5.5H2.5M3.5 10.5H0.5V7.5M3.5 10.5V13.5H12.5V10.5M3.5 10.5V7.5H12.5V10.5M12.5 10.5H13.5M12.5 5.5H15.5V8.5M12.5 5.5V3.5M12.5 3.5L9.5 0.5M12.5 3.5H9.5V0.5M0.5 7.5V5.5H2.5M0.5 7.5H2.5V5.5M13.5 10.5H15.5V8.5M13.5 10.5V8.5H15.5M5 9.5H11M5 11.5H11' stroke='%23888888'/%3e%3c/svg%3e ");
+  --btn-action-download-disabled: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3 5.5L6 8.5L9 5.5H6.5H5.5H3Z' fill='%23888888'/%3e%3cpath d='M5.5 5.5H3L6 8.5L9 5.5H6.5M5.5 5.5V0.5H6.5V5.5M5.5 5.5H6.5M0.5 9.5V11.5H11.5V9.5H0.5Z' stroke='%23888888'/%3e%3c/svg%3e ");
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+  margin: 0;
+  padding: 0;
+  gap: 40px;
 }
 
 .btn-UI-kit {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .btn-states-container {
@@ -41,8 +61,10 @@
 }
 
 .btn-actions-container {
-  display: flex;
+  display: grid;
   gap: 10px;
+  grid-template-columns: repeat(5, auto);
+  grid-auto-rows: auto;
 }
 
 .btn-state {
@@ -78,17 +100,17 @@
   padding: 0 14px;
 }
 
-.is-hover {
+.btn:hover {
   background-color: var(--btn-hover-bg-color);
   color: var(--btn-hover-text-color);
 }
 
-.is-active {
+.btn:active {
   background-color: var(--btn-active-bg-color);
   color: var(--btn-active-text-color);
 }
 
-:disabled {
+.btn:disabled {
   background-color: var(--btn-disabled-bg-color);
   color: var(--btn-disabled-text-color);
   border-color: var(--btn-border-disabled-color);
@@ -154,11 +176,11 @@
   background-position: center;
 }
 
-.btn-arrow.is-hover::after {
+.btn-arrow:hover::after {
   background-image: var(--btn-arrow);
 }
 
-.btn-arrow.is-active::after {
+.btn-arrow:active::after {
   background-image: var(--btn-arrow-active);
 }
 
@@ -179,10 +201,26 @@
   background-image: var(--btn-action-edit);
 }
 
+.btn-action.edit:active::before {
+  background-image: var(--btn-action-edit-active);
+}
+
+.btn-action.edit:disabled::before {
+  background-image: var(--btn-action-edit-disabled);
+}
+
 .btn-action.upload::before {
   background-image: var(--btn-action-upload);
   width: 12px;
   height: 13px;
+}
+
+.btn-action.upload:active::before {
+  background-image: var(--btn-action-upload-active);
+}
+
+.btn-action.upload:disabled::before {
+  background-image: var(--btn-action-upload-disabled);
 }
 
 .btn-action.delete::before {
@@ -191,14 +229,38 @@
   height: 11px;
 }
 
+.btn-action.delete:active::before {
+  background-image: var(--btn-action-delete-active);
+}
+
+.btn-action.delete:disabled::before {
+  background-image: var(--btn-action-delete-disabled);
+}
+
 .btn-action.print::before {
   background-image: var(--btn-action-print);
   width: 16px;
   height: 14px;
 }
 
+.btn-action.print:active::before {
+  background-image: var(--btn-action-print-active);
+}
+
+.btn-action.print:disabled::before {
+  background-image: var(--btn-action-print-disabled);
+}
+
 .btn-action.download::before {
   background-image: var(--btn-action-download);
   width: 12px;
   height: 12px;
+}
+
+.btn-action.download:active::before {
+  background-image: var(--btn-action-download-active);
+}
+
+.btn-action.download:disabled::before {
+  background-image: var(--btn-action-download-disabled);
 }
