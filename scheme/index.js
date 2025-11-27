@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("scheme-root");
   const svgNS = "http://www.w3.org/2000/svg";
 
+  // Далее идёт блок vibe coding
   function port(el, side) {
     const r = el.getBoundingClientRect();
     const rr = root.getBoundingClientRect();
