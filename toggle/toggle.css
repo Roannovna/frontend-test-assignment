@@ -61,7 +61,7 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-.toogle__element {
+.toggle__element {
   display: block;
   position: absolute;
   top: 50%;

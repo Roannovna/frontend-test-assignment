@@ -4,19 +4,24 @@
   box-sizing: border-box;
 }
 
+:root {
+  --top-band-height: clamp(40px, 12vh, 120px);
+}
+
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100dvw;
-  height: 100dvh;
+  min-height: 100dvh;
   position: relative;
+  padding: calc(var(--top-band-height) + 20px) 16px 24px;
 }
 
 body::after {
   width: 100dvw;
-  height: 15dvh;
+  height: var(--top-band-height);
   content: "";
   position: fixed;
   top: 0;
@@ -25,27 +30,28 @@ body::after {
 }
 
 .projects-list {
-  width: max-content;
+  width: 100%;
+  max-width: 1200px;
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px 60px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px 24px;
 }
 
 .projects-list__item {
   display: flex;
-  width: min-content;
+  width: 100%;
 }
 
 a,
 a:link,
 a:visited {
-    display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      width: min-content;
-      gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
   text-decoration: none;
   font-size: 16px;
   color: #333333;
@@ -55,14 +61,59 @@ a:visited {
   cursor: pointer;
 }
 
-li img{
+li img {
   width: 100px;
   height: 100px;
 }
 
 footer {
-  position: fixed;
-  bottom: 40px;
-  left: 50%;
-  transform: translate(-50%, 0);
+  position: static;
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .projects-list {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    gap: 12px 16px;
+  }
+  a,
+  a:link,
+  a:visited {
+    font-size: 14px;
+  }
+  li img {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+@media (min-width: 768px) {
+  .projects-list {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px 32px;
+  }
+  li img {
+    width: 96px;
+    height: 96px;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 0;
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .projects-list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 60px;
+  }
 }

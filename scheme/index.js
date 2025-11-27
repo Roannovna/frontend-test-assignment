@@ -33,15 +33,15 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       from: { id: "stanislav", side: "left" },
-      to: { id: "alliksaar", side: "buttom" },
+      to: { id: "alliksaar", side: "bottom" },
     },
     {
       from: { id: "igor", side: "left" },
-      to: { id: "alliksaar", side: "buttom" },
+      to: { id: "alliksaar", side: "bottom" },
     },
     {
       from: { id: "anton", side: "left" },
-      to: { id: "alliksaar", side: "buttom" },
+      to: { id: "alliksaar", side: "bottom" },
     },
     {
       from: { id: "aleksandr", side: "left" },
@@ -49,15 +49,15 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       from: { id: "ludmila", side: "left" },
-      to: { id: "stanislav", side: "buttom" },
+      to: { id: "stanislav", side: "bottom" },
     },
     {
       from: { id: "olga", side: "left" },
-      to: { id: "stanislav", side: "buttom" },
+      to: { id: "stanislav", side: "bottom" },
     },
     {
       from: { id: "sergey", side: "left" },
-      to: { id: "stanislav", side: "buttom" },
+      to: { id: "stanislav", side: "bottom" },
     },
     {
       from: { id: "dmitriy", side: "left" },
