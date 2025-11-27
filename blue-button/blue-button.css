@@ -20,7 +20,8 @@ body {
   align-items: center;
   width: 100dvw;
   height: 100dvh;
-  background-color: var(--bg-color)
+  background-color: var(--bg-color);
+  position: relative;
 }
 
 .btn-states {
@@ -102,3 +103,9 @@ body {
   transform: translateY(1px);
 }
 
+footer {
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+}

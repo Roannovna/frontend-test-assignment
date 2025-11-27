@@ -45,6 +45,7 @@ body {
   margin: 0;
   padding: 0;
   gap: 40px;
+  position: relative;
 }
 
 .btn-UI-kit {
@@ -263,4 +264,11 @@ body {
 
 .btn-action.download:disabled::before {
   background-image: var(--btn-action-download-disabled);
+}
+
+footer {
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
 }

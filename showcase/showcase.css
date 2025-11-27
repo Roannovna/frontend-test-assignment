@@ -19,6 +19,7 @@ body {
   width: 100dvw;
   height: 100dvh;
   padding: 30px;
+  position: relative;
 }
 
 .showcase {
@@ -62,4 +63,11 @@ body {
   font-size: 14px;
   line-height: 22px;
   color: var(--text-color);
+}
+
+footer {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -10%);
 }
